@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 import com.naukri.pages.Home;
 import com.naukri.pages.Login;
 import com.naukri.pages.Logout;
-import com.naukri.utilities.hooks;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -21,7 +20,7 @@ public class UpdatePortal {
 
 	@Given("Launch Browser")
 	public void launch_browser() {
-		driver = hooks.LaunchBrowser();
+		driver = hooks.driver;
 		loginPage = new Login(driver);
 		homepage = new Home(driver);
 		logout = new Logout(driver);

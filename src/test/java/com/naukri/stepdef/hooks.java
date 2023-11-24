@@ -1,15 +1,12 @@
-package com.naukri.utilities;
-
-import org.openqa.selenium.WebDriver;
-
+package com.naukri.stepdef;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-//import java.time.Duration;
 import java.time.Duration;
 
 public class hooks {
@@ -17,17 +14,6 @@ public class hooks {
 
 	@Before
 	public void setup() {
-	System.out.println("In Set up");
-	}
-
-	@After
-	public  void Teardown() {
-		driver.quit();
-		System.out.println("Closing browser");
-	}
-
-	public static WebDriver LaunchBrowser()
-	{
 		ChromeOptions opt = new ChromeOptions();
 		opt.addArguments("--disable-notifications");
 
@@ -39,6 +25,16 @@ public class hooks {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		driver.get("https://www.naukri.com/");
-		return driver;
+//		return driver;
+
+
 	}
+
+	@After
+	public  void Teardown() {
+		driver.quit();
+		System.out.println("Closing browser");
+	}
+
+
 }
