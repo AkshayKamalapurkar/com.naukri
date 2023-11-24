@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import com.naukri.pages.Home;
 import com.naukri.pages.Login;
 import com.naukri.pages.Logout;
-import com.naukri.utilities.Myhooks;
+import com.naukri.utilities.hooks;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -17,14 +17,14 @@ public class UpdatePortal {
 	public WebDriver driver;
 	public Login loginPage;
 	public Home homepage;
-	public Logout logoutpage;
+	public Logout logout;
 
 	@Given("Launch Browser")
 	public void launch_browser() {
-		driver = Myhooks.setup();
+		driver = hooks.LaunchBrowser();
 		loginPage = new Login(driver);
 		homepage = new Home(driver);
-		logoutpage = new Logout(driver);
+		logout = new Logout(driver);
 	}
 
 	@Given("User navigates to loginpage")
@@ -53,14 +53,13 @@ public class UpdatePortal {
 	}
 	
 	@And("click on viewprofileandEditHeadline")
-	public void click_viewprofile() {
+	public void click_viewprofile()  {
 		homepage.viewProfile();
 	}
 	
 	@Then("click on logout")
-	public void logout()
-	{
-		logoutpage.viewprofile_logout();
+	public void logout() throws Exception {
+		logout.viewprofile_logout();
 	}
 
 }

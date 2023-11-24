@@ -21,6 +21,7 @@ Feature: Login
   Login into Naukri application
   Background:
 	Given Launch Browser
+
 	
 	 # Scenario: Successful login with Valid Credentials
    # Given User navigates to loginpage
@@ -35,6 +36,7 @@ Feature: Login
     Then click on login button
     And click on viewprofileandEditHeadline
     Then click on logout
+
     
     
     Examples:

@@ -34,8 +34,8 @@ public class Home {
 	@CacheLookup
 	private WebElement btn_save;
 	
-	public void viewProfile()
-	{
+	public void viewProfile() {
+//		Thread.sleep(80000);
 		btn_view_profile.click();
 		txt_resume_headline.click();
 		txt_resume_headline_text.sendKeys(".");

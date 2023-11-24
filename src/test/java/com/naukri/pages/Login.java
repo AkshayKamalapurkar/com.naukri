@@ -1,6 +1,6 @@
 package com.naukri.pages;
 
-import java.time.Duration;
+
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,6 +9,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+//import java.time.Duration;
+import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 public class Login {
 
@@ -35,7 +39,8 @@ public class Login {
 	@CacheLookup
 	private WebElement btnSubmit;
 
-	public void setUsername(String username) {
+	public void setUsername(String username)  {
+//		Thread.sleep(3000);
 		user_username.sendKeys(username);
 	}
 
@@ -43,8 +48,8 @@ public class Login {
 		user_password.sendKeys(password);
 	}
 
-	public void clicklogin() {
-		
+	public void clicklogin()  {
+//		Thread.sleep(3000);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		WebElement ele = wait.until(ExpectedConditions.elementToBeClickable(btnLogin));
 		ele.click();

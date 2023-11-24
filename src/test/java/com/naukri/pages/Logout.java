@@ -22,9 +22,10 @@ public class Logout {
 	private WebElement btn_logout;
 	
 	
-	public void viewprofile_logout()
-	{
+	public void viewprofile_logout() throws Exception {
+//		Thread.sleep(8000);
 		btn_viewprofile.click();
+//		Thread.sleep(3000);
 		btn_logout.click();
 	}
 	
