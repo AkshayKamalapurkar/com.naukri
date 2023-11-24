@@ -19,15 +19,9 @@ public class hooks {
 
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver(opt);
-		//FirefoxProfile fx = new FirefoxProfile();
-		//fx.setPreference("dom.webnotifications.enabled",false);
-//		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		driver.get("https://www.naukri.com/");
-//		return driver;
-
-
 	}
 
 	@After
