@@ -1,0 +1,6 @@
+com\naukri\stepdef\hooks.class
+com\naukri\pages\Login.class
+com\naukri\testscript\TestRunner.class
+com\naukri\stepdef\UpdatePortal.class
+com\naukri\pages\Home.class
+com\naukri\pages\Logout.class

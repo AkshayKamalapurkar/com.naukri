@@ -51,7 +51,7 @@ public class UpdatePortal {
 
 	}
 	
-	@And("click on viewprofileandEditHeadline")
+	@And("click on profileableEditHeadline")
 	public void click_viewprofile()  {
 		homepage.viewProfile();
 	}
