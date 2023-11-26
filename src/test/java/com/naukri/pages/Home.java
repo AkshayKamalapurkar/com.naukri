@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 import java.io.File;
 
@@ -73,7 +74,9 @@ public class Home {
 				uploadFile = new File("src/test/resources/naukriresumes/ASHRITA_HONNUNGAR_CV.docx");
 				updateResume.sendKeys(uploadFile.getAbsolutePath());
 				break;
-
+			default:
+				Assert.assertTrue(false);
+				System.out.println("Names did not match");
 		}
 	}
 
