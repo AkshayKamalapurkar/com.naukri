@@ -68,6 +68,12 @@ public class Home {
 				uploadFile = new File("src/test/resources/naukriresumes/ShubhamStorage.pdf");
 				updateResume.sendKeys(uploadFile.getAbsolutePath());
 				break;
+
+			case "Ashrita Honnungar":
+				uploadFile = new File("src/test/resources/naukriresumes/ASHRITA_HONNUNGAR_CV.docx");
+				updateResume.sendKeys(uploadFile.getAbsolutePath());
+				break;
+
 		}
 	}
 
