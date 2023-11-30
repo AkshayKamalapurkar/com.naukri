@@ -49,7 +49,6 @@ public class Login {
 	}
 
 	public void clicklogin()  {
-//		Thread.sleep(3000);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		WebElement ele = wait.until(ExpectedConditions.elementToBeClickable(btnLogin));
 		ele.click();
@@ -59,19 +58,5 @@ public class Login {
 		btnSubmit.click();
 	}
 
-	// Login Button
-	// driver.findElement(By.xpath("//a[@id='login_Layer']")).click();
-
-	// EMAIL ID
-	// driver.findElement(By.xpath("//input[@placeholder='Enter your active Email ID
-	// / Username']")).sendKeys("Shubhampanegaon@gmail.com");
-
-	// Password
-	// driver.findElement(By.xpath("//input[@placeholder='Enter your
-	// password']")).sendKeys("Sunitha@1994");
-
-	// Submit
-
-	// driver.findElement(By.xpath("//button[normalize-space()='Login']")).click();
 
 }
