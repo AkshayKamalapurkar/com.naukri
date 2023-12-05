@@ -1,6 +1,7 @@
 package com.naukri.pages;
 
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -49,6 +50,7 @@ public class Home {
 	public void viewProfile() {
 		btn_view_profile.click();
 		txt_resume_headline.click();
+		txt_resume_headline_text.sendKeys(Keys.BACK_SPACE);
 		txt_resume_headline_text.sendKeys(".");
 		btn_save.click();
 		updateResume();
@@ -74,6 +76,14 @@ public class Home {
 				uploadFile = new File("src/test/resources/naukriresumes/ASHRITA_HONNUNGAR_CV.docx");
 				updateResume.sendKeys(uploadFile.getAbsolutePath());
 				break;
+			case "Shivaprakash":
+				uploadFile = new File("src/test/resources/naukriresumes/Shivaprakash_Resume.pdf");
+				updateResume.sendKeys(uploadFile.getAbsolutePath());
+				break;
+//			case "Sujay Chivatgundi":
+//				uploadFile = new File("src/test/resources/naukriresumes/ASHRITA_HONNUNGAR_CV.docx");
+//				updateResume.sendKeys(uploadFile.getAbsolutePath());
+//				break;
 			default:
 				Assert.assertTrue(false);
 				System.out.println("Names did not match");

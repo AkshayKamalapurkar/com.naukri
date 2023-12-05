@@ -15,9 +15,11 @@ Feature: Login into Naukri application
 
     Examples:
 		|usernames|passwords|
-#		|Shubhampanegaon@gmail.com|Sunitha@1994|
+		|Shubhampanegaon@gmail.com|Sunitha@1994|
 		|shubhampanegaon79@gmail.com|323039323039@Sp|
-#        |ashu.honnungar@gmail.com|rani28091994|
+        |sujju.sujay7@gmail.com|Jazz1176|
+        |ashu.honnungar@gmail.com|rani28091994|
+        |shivaprakashj77@gmail.com|Shiva@13|
 #        |marutibadiger073@gmail.com|Hilux@13|
 
 
