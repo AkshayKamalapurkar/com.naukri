@@ -68,7 +68,7 @@ public class Home {
 				break;
 
 			case "Shubham Panegaon":
-				uploadFile = new File("src/test/resources/naukriresumes/ShubhamStorage.pdf");
+				uploadFile = new File("src/test/resources/naukriresumes/Shubham_Automation_CV.pdf");
 				updateResume.sendKeys(uploadFile.getAbsolutePath());
 				break;
 
